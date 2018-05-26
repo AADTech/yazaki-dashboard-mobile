@@ -1,0 +1,114 @@
+{
+  "response": {
+    "news": [
+      {
+        "account": "Disney",
+        "accountId": 2,
+        "dateTime": "03-11-2013",
+        "description": "Complete and send your team's Roster Data if you have not done already. This is very critical for the management of the account.",
+        "id": 1,
+        "newsDate": null,
+        "title": "MANAGERS: Roster Data"
+      },
+      {
+        "account": "Disney",
+        "accountId": 2,
+        "dateTime": "02-25-2016",
+        "description": "Capgemini takes over IGATE.",
+        "id": 2,
+        "newsDate": null,
+        "title": "Capgemini takes over IGATE."
+      },
+      {
+        "account": "Disney",
+        "accountId": 2,
+        "dateTime": "03-11-2013",
+        "description": "Hi Siva!\n\nCompleted the changes suggested will be sending you the deployable code in few minutes.",
+        "id": 3,
+        "newsDate": null,
+        "title": "Upgrade Completed"
+      },
+      {
+        "account": "Disney",
+        "accountId": 2,
+        "dateTime": "03-11-2013",
+        "description": "If all goes well, Capgram Web app will go live with updated Roster data this weekend. The mobile apps will be available next week.",
+        "id": 4,
+        "newsDate": null,
+        "title": "Capgram planned for this weekend"
+      },
+      {
+        "account": "Disney",
+        "accountId": 2,
+        "dateTime": "03-11-2013",
+        "description": "All,\n\nSubrata Pal and Brad Little are visiting us and we are meeting at the King's Bowl for the event. Please be on time!",
+        "id": 5,
+        "newsDate": null,
+        "title": "All invited for the Exec meeting"
+      },
+      {
+        "account": "Disney",
+        "accountId": 2,
+        "dateTime": "03-11-2013",
+        "description": "For urgent needs for our team, we need Interviewers for hiring J2EE roles. Appreciate any speedy response.",
+        "id": 6,
+        "newsDate": null,
+        "title": "Interviewers Needed"
+      },
+      {
+        "account": "Disney",
+        "accountId": 2,
+        "dateTime": "03-11-2013",
+        "description": "All parents will get busy with School Drop off as the School Summer vacation is over! Get ready!",
+        "id": 7,
+        "newsDate": null,
+        "title": "Summer Vacation Over"
+      },
+      {
+        "account": "Disney",
+        "accountId": 2,
+        "dateTime": "03-11-2013",
+        "description": "Managers Meeting on Tuesday, 5/19/2015 7:30 AM.",
+        "id": 8,
+        "newsDate": null,
+        "title": "Managers Meeting on Tuesday, 5/19/2015"
+      },
+      {
+        "account": "Disney",
+        "accountId": 2,
+        "dateTime": "03-11-2013",
+        "description": "Folks, we are hiring for many open needs including PM, Architects, .NET Developers. Any referrals are welcome!",
+        "id": 9,
+        "newsDate": null,
+        "title": "Referrals Needed"
+      },
+      {
+        "account": "Disney",
+        "accountId": 2,
+        "dateTime": "03-11-2013",
+        "description": "Complete and send your team's Roster Data if you have not done already. This is very critical for the management of the account.",
+        "id": 10,
+        "newsDate": null,
+        "title": "MANAGERS: Roster Data"
+      },
+      {
+        "account": "Disney",
+        "accountId": 2,
+        "dateTime": "03-11-2013",
+        "description": "Let us all Celebrate! Why? No Reason! ?",
+        "id": 11,
+        "newsDate": null,
+        "title": "Celebration Time"
+      },
+      {
+        "account": "Disney",
+        "accountId": 2,
+        "dateTime": "03-11-2013",
+        "description": "Our executive has a a baby Boy. New J2EE Developer? Nay, is it too much to ask for an Architect?! ",
+        "id": 12,
+        "newsDate": null,
+        "title": "Junior Exec"
+      }
+    ]
+  }
+}

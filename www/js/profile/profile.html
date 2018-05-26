@@ -1,0 +1,52 @@
+<ion-content padding="true" class="has-header Profile" style="background-color: #f1f1f1 !important;">
+    <div class="card" style="margin: 7px;margin-top: 60px;">
+        <div class="item item-text-wrap" style="padding: 10px 10px 0px 10px;">
+            <div class="row" style="display: block;">
+                <div class="card_heading">
+                    Profile
+                </div>
+                <div style="margin-left:0px;">
+                    <div class="tab-content" style="min-width: 100% !important;">
+                        <table>
+                            <tr>
+                                <td class="border-bu input-header">
+                                    <span class="table_col_header" style="margin-top: 15px;padding-top: 2px;display: block;"> User Name </span>
+                                    <span class="table_col_value">
+                                        <span>{{profileCtrl.profileDetails.userName}}</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-bu input-header">
+                                    <span class="table_col_header"> First Name </span><br>
+                                    <span class="table_col_value"> 
+                                        <input type="text" class="edit_profile_input" ng-model="profileCtrl.profileDetails.firstName">
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-bu input-header">
+                                    <span class="table_col_header" style="margin-top: 15px;padding-top: 2px;"> Last Name </span>
+                                    <span class="table_col_value"> 
+                                        <input type="text" class="edit_profile_input" ng-model="profileCtrl.profileDetails.lastName">
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-bu input-header">
+                                    <span class="table_col_header"> Email </span><br>
+                                    <span class="table_col_value"> 
+                                        <input type="text" class="edit_profile_input" ng-model="profileCtrl.profileDetails.emailId">
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="signIn">
+                            <button class="update-button" ng-click="profileCtrl.profileUpdate(profileCtrl.profileDetails)">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>

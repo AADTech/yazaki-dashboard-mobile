@@ -1,0 +1,78 @@
+<!--
+<ion-view title="Login" hide-nav-bar="true" id="page4" style="background-color:#34BCE2;">
+  <ion-content padding="true"
+               style="background: url(img/tLFitU7uQh2bso0keqOS_uname.jpg) no-repeat center;background-size:cover;"
+               class="manual-ios-statusbar-padding">
+    <div class="spacer" style="width: 300px; height: 50px;"></div>
+    <div>
+      <img src="img/yazaki.jpg"
+           style="display: block; width: 84%; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+    <div ng-show="loginCtrl.showLoadingFlg" class="spinner-center">
+      <ion-spinner class="spinner-light"></ion-spinner>
+    </div>
+    <form id="login-form1" class="list" ng-show="!loginCtrl.showLoadingFlg">
+      <div class="spacer" style="width: 300px; height: 99px;"></div>
+      <label class="item item-input" id="login-input3" name=" User Name">
+        <div class="uname">
+          <img src="img/nSsJK3q6TEGyTmlW4aDX_uname.png"
+               style="display: block; width: auto; height: auto; margin-left: auto; margin-right: auto;">
+        </div>
+        <input type="text" placeholder="User Name" ng-model="loginCtrl.userName">
+      </label>
+      <label class="item item-input" id="login-input4" name="Password">
+        <div class="password">
+          <img src="img/7tvmQuArTF69ruvsMKGi_password.png"
+               style="display: block; width: auto; height: auto; margin-left: auto; margin-right: auto;">
+        </div>
+        <input type="text" placeholder="Password" ng-if="loginCtrl.showPasswordIsChecked" ng-model="loginCtrl.password">
+        <input type="password" placeholder="Password" ng-if="!loginCtrl.showPasswordIsChecked"
+               ng-model="loginCtrl.password">
+        <div class="pwdright">
+          <img src="img/ktK9a6DTQ2e3C18nn6SM_password-righticon.jpg" ng-click="loginCtrl.showPassword()"
+               style="display: block; width: auto; height: auto; margin-left: auto; margin-right: auto;">
+        </div>
+      </label>
+      <ion-checkbox id="login-checkbox1" checked="loginCtrl.rememberMe">Remember Me</ion-checkbox>
+      <button id="login-button1" style="border-radius:8px 8px 8px 8px;" class="button button-positive  button-block"
+              ng-click="loginCtrl.loginClick()">
+        Login
+      </button>
+    </form>
+  </ion-content>
+</ion-view>
+-->
+
+<ion-view title="Login" hide-nav-bar="true" id="page4" class="home">
+    <ion-content>
+      <div  class ="loginHome">
+        <div ng-show="loginCtrl.showLoadingFlg" class="spinner-center">
+          <ion-spinner class="spinner-light"></ion-spinner>
+        </div>
+        <div class="capgramText">Disney</div>
+        <div class ="inpt-div-box">
+          <form name="login-form1" id="login-form1" class="list" ng-show="!loginCtrl.showLoadingFlg" >
+            <label class="item item-input" id="login-input3" name="User Name">
+                <div class="uname">
+                    <img src="img/profile.png" class="img-user">
+                </div>
+                <input type="text" id="user-input_1" placeholder="Username" ng-model="loginCtrl.userName">
+            </label>
+            <label class="item item-input" id="login-input4" name="Password">
+                <div class="password" id="userPassword">
+                    <img ng-src="img/lock.png" class="img-padlock">
+                  </div>
+                  <input type="text" placeholder="Password" ng-if="loginCtrl.showPasswordIsChecked" ng-model="loginCtrl.password">
+                  <input type="password" id="user-input_2" placeholder="Password" ng-model="loginCtrl.password">
+                  <div class="pwdright">
+                      <img src="img/help.png" ng-click="loginCtrl.showPassword()" class="img-pwdright">
+                  </div>
+            </label>
+          </form>
+        </div>
+        <div class="signIn">
+            <button class="signIn-button" ng-click="loginCtrl.loginClick()">Sign In</button>
+        </div>
+      </div>
+    </ion-content>
+</ion-view>

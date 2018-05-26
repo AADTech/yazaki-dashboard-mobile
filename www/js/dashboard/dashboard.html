@@ -1,0 +1,73 @@
+<ion-content padding="true" class="has-header Profile" style="background-color: #f1f1f1 !important;">
+    <div class="card card-bulletin">
+        <div class="item item-text-wrap" style="padding: 2px 5px 2px 5px;">
+            <div class="row bulletien">
+                <div class="marqueeContainer">
+                    <div class="marquee">
+                        <div class="img1">{{bulletin}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="marqueeContainer">
+                <div class="logoContainer">
+                    <div class="logo">
+                        <!--<img src={{p.logoURL}}>-->
+                        <img ng-class="img_one" src="img/disney.png" width="102px" height="40px" ng-click="changeBrand('img_one')">
+                        <img ng-class="img_two" src="img/disney.png" width="102px" height="40px" ng-click="changeBrand('img_two')">
+                        <img ng-class="img_three" src="img/disney.png" width="102px" height="40px" ng-click="changeBrand('img_three')">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="card" style="margin: 7px;">
+        <div class="item item-text-wrap" style="padding: 10px 10px 0px 10px;">
+            <div class="row" style="display: block;">
+                <div class="card_heading"> Sales Info </div>
+                <div class="card_heading_date">
+                    <span> 1st Jan to 30th Jan 2018 </span>
+                    <span ng-click="showSalesDetails()" style="float: right;margin-left: 15px;text-decoration: underline;
+    text-decoration-color: #1f77b4;">Details
+                </span>
+                </div>
+                <div style="margin-left: -20px;">
+                    <bar-graph id='sales-bar' data="{{salesInfoBarGraphData}}"></bar-graph>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="margin: 7px;">
+        <div class="item item-text-wrap" style="padding: 10px 10px 0px 10px;">
+            <div class="row" style="display: block;">
+                <div class="card_heading"> I/O Info </div>
+                <div class="card_heading_date"> 1st Jan to 30th Jan 2018
+                    <span ng-click="showIoDetails()" style="float: right;margin-left: 15px;text-decoration: underline;
+    text-decoration-color: #1f77b4;">
+                      Details
+                  </span>
+                </div>
+                <div style="margin-left: -20px;">
+                    <bar-graph id='io-bar' data="{{barGraphData}}"></bar-graph>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="margin: 7px;">
+        <div class="item item-text-wrap" style="padding: 10px 10px 0px 10px;">
+            <div class="row" style="display: block;">
+                <div class="card_heading">
+                    Supplier Rating
+                </div>
+                <div style="margin-left: -20px;">
+                    <stack-graph id='stacked-bar' data="{{stackGraphData}}"></stack-graph>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</ion-content>

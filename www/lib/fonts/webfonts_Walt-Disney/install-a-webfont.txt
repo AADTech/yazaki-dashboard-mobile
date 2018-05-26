@@ -1,0 +1,24 @@
+Installing Webfonts
+
+1. Upload the files from this zip to your domain.
+2. Add this code to your website:
+
+@font-face {
+    font-family: 'Walt-Disney-Script-v41';
+    src:url('Walt-Disney-Script-v41.ttf.woff') format('woff'),
+        url('Walt-Disney-Script-v41.ttf.svg#Walt-Disney-Script-v41') format('svg'),
+        url('Walt-Disney-Script-v41.ttf.eot'),
+        url('Walt-Disney-Script-v41.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+3. Integrate the fonts into your CSS:
+Add the font name to your CSS styles. For example:
+
+h1 { 
+   font-family: 'Walt-Disney-Script-v41';
+}  
+
+Troubleshooting Webfonts
+1. You may be using the fonts on different domain or subdomain.
+2. Check if you have link the fonts properly in the CSS.

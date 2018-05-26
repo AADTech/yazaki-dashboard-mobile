@@ -1,0 +1,83 @@
+{
+  "response": {
+    "login": {
+      "accountStatus": "Active",
+      "clientName": "Disney",
+      "contractId": 0,
+      "contractName": "DisneyDefault",
+      "currentStatus": "Rolled-off",
+      "employeeAccessRole": {
+        "roleName": "BACKEND_ADMIN",
+        "accessLevel": "ACCOUNT",
+        "haveWriteAccess": true,
+        "userRole": "superAdmin",
+        "accounts": [
+          {
+            "id": 1,
+            "name": "Cisco",
+            "hqLocation": "San Jose",
+            "offshoreLocation": "Bangalore",
+            "buId": 1,
+            "buName": "Staff Aug",
+            "portfolios": [],
+            "projects": [],
+            "portfolioId": 0,
+            "programId": 0,
+            "subprogramId": 0,
+            "value": 1
+          },
+          {
+            "id": 2,
+            "name": "Disney",
+            "hqLocation": "San Jose",
+            "offshoreLocation": "Bangalore",
+            "buId": 1,
+            "buName": "Staff Aug",
+            "portfolios": [],
+            "projects": [],
+            "portfolioId": 0,
+            "programId": 0,
+            "subprogramId": 0,
+            "value": 2
+          },
+          {
+            "id": 3,
+            "name": "RCCL",
+            "hqLocation": "San Jose",
+            "offshoreLocation": "Bangalore",
+            "buId": 1,
+            "buName": "Staff Aug",
+            "portfolios": [],
+            "projects": [],
+            "portfolioId": 0,
+            "programId": 0,
+            "subprogramId": 0,
+            "value": 3
+          },
+          {
+            "id": 4,
+            "name": "Cox",
+            "hqLocation": "San Jose",
+            "offshoreLocation": "Bangalore",
+            "buId": 1,
+            "buName": "Staff Aug",
+            "portfolios": [],
+            "projects": [],
+            "portfolioId": 0,
+            "programId": 0,
+            "subprogramId": 0,
+            "value": 4
+          }
+        ]
+      },
+      "firstName": "Mohan",
+      "id": 6741,
+      "lastName": "Kumar M",
+      "reportingManagerId": 0,
+      "resourceType": "India-Own",
+      "title": "Senior Consultant",
+      "userId": "mohankm",
+      "visaHolder": "N"
+    }
+  }
+}

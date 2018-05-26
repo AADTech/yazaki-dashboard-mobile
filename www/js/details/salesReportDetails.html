@@ -1,0 +1,148 @@
+<ion-view view-title="sales" hide-nav-bar="true" hide-back-button="true">
+    <ion-tabs class="tabs-striped tabs-top tabs-background-dark tabs-color-energized">
+        
+        <ion-tab title="Daily">
+            <ion-nav-view name="tab-11" class="tab-view" style="height: 100% !important">
+                <ion-content padding="true" has-header="false Profile" style="background-color: #f1f1f1 !important;">
+                    <div class="card" style="margin: 5px;margin-top: 15px;">
+                        <div class="item item-text-wrap" style="padding: 10px 10px 0px 10px;">
+                            <div class="row" style="display: block;">
+                                <div class="card_heading"> Sales Info</div>
+                                
+                                  
+                                
+                                <div class="card_heading_date">
+                                    
+                                    <select name="salesMonthChange" ng-model="salesMonth" ng-change="DailySalesMonthChnaged(salesMonth,'SALES','sales-bar-info',salesYear)" class="monthDropdown" >
+                                        <option value={{month}} ng-repeat="month in monthArray">{{month}}</option>
+                                    </select>
+                                    <select name="salesYearChange" ng-model="salesYear" ng-change="DailySalesYearChnaged(salesYear,'SALES','sales-bar-info',salesMonth)" class="monthDropdown">
+                                        <option value={{year}} ng-repeat="year in yearArray">{{year}}</option>
+                                    </select>
+                                    
+                                    <!--<ion-toggle ion-toggle-text ng-model="simple" style="margin-top: -30px;"></ion-toggle>
+                                    <select name="viewChange" ng-model="viewDailySalesInfo">
+                                        <option value="Data">Data</option>
+                                        <option value="Graph" selected>Graph</option>
+                                    </select>-->
+                                    
+                                </div>
+                                <div style="margin-left: -20px;">
+                                    <span ng-if="salesInfoBarGraphData.length == 0" class="norecord">No record available</span>
+                                    <bar-graph id='sales-bar-info' data="{{salesInfoBarGraphData}}" ng-if="salesInfoBarGraphData.length != 0 && viewDailySalesInfo == 'Graph'"></bar-graph>
+                                    <div class="table_info" ng-if="salesInfoBarGraphData.length != 0 && viewDailySalesInfo == 'Data' ">
+                                        <table class="table_info">
+                                          <thead class="table_head">
+                                              <tr>
+                                                <td>Day</td>
+                                                <td>Total</td>
+                                              </tr>
+                                          </thead> 
+                                          <tbody class="table_body">
+                                            <tr ng-repeat="bgd in salesInfoBarGraphData">
+                                                <td>{{ bgd.day }}</td>
+                                                <td>{{ bgd.total }}</td>
+                                            </tr>
+                                          </tbody>    
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-nav-view>
+        </ion-tab>
+
+        <ion-tab title="Monthly">
+            <ion-nav-view name="tab-12" class="tab-view" style="height: 100% !important">
+                <ion-content padding="true" has-header="false Profile" style="background-color: #f1f1f1 !important;">
+                    <div class="card" style="margin: 5px;margin-top: 15px;">
+                        <div class="item item-text-wrap" style="padding: 10px 10px 0px 10px;">
+                            <div class="row" style="display: block;">
+                                <div class="card_heading"> Sales Info</div>
+                                <div class="card_heading_date">
+                                    <select name="viewChange" ng-model="viewMonthlySalesInfo">
+                                        <option value="Data">Data</option>
+                                        <option value="Graph" selected>Graph</option>
+                                    </select>
+                                    <select name="salesYearChange" ng-model="salesYear" ng-change="MonthlySalesMonthChnaged(salesYear,'SALES')" class="monthDropdown">
+                                        <option value={{year}} ng-repeat="year in yearArray">{{year}}</option>
+                                    </select>
+                                </div>
+                                <div style="margin-left: -20px;">
+                                    <span ng-if="groupBarGraphSalesDataMonthly.length == 0" style="display: inline-block;margin-top: 10%;margin-bottom: 10%;margin-left: 25%;">No record available</span>
+                                    <group-bar-graph id='monthly-bar-info' data="{{groupBarGraphSalesDataMonthly}}" ng-if="groupBarGraphSalesDataMonthly.length != 0 && viewMonthlySalesInfo == 'Graph'"></group-bar-graph>
+                                    <div class="table_info" ng-if="groupBarGraphSalesDataMonthly.length != 0 && viewMonthlySalesInfo == 'Data' ">
+                                        <table class="table_info">
+                                          <thead class="table_head">
+                                              <tr>
+                                                <td>Actual Planned</td>
+                                                <td>Actual Total</td>
+                                              </tr>
+                                          </thead> 
+                                          <tbody class="table_body">
+                                            <tr ng-repeat="gbsm in groupBarGraphSalesDataMonthly">
+                                                <td>{{ gbsm.plannedTotal }}</td>
+                                                <td>{{ gbsm.actualTotal }}</td>
+                                            </tr>
+                                          </tbody>    
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-nav-view>
+        </ion-tab>
+
+        <ion-tab title="Yearly">
+            <ion-nav-view name="tab-13" class="tab-view">
+                <ion-content padding="true" has-header="false Profile" style="background-color: #f1f1f1 !important;">
+                    <div class="card" style="margin: 5px;margin-top: 15px;">
+                        <div class="item item-text-wrap" style="padding: 10px 10px 0px 10px;">
+                            <div class="row" style="display: block;">
+                                <div class="card_heading"> Sales Info</div>
+                                <div class="onoffswitch">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+    <label class="onoffswitch-label" for="myonoffswitch">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div>
+                                <div class="card_heading_date">
+                                    <select name="viewChange" ng-model="viewYearlySalesInfo">
+                                        <option value="Data">Data</option>
+                                        <option value="Graph" selected>Graph</option>
+                                    </select>
+                                </div>
+                                <div style="margin-left: -20px;">
+                                    <span ng-if="groupBarGraphSalesDataYearly.length == 0" style="display: inline-block;margin-top: 10%;margin-bottom: 10%;margin-left: 25%;">No record available</span>
+                                    <group-bar-graph id='yearly-bar-info' data="{{groupBarGraphSalesDataYearly}}" ng-if="groupBarGraphSalesDataYearly.length != 0 && viewYearlySalesInfo == 'Graph' "></group-bar-graph>
+                                    <div class="table_info" ng-if="groupBarGraphSalesDataYearly.length != 0 && viewYearlySalesInfo == 'Data' ">
+                                        <table class="table_info">
+                                          <thead class="table_head">
+                                              <tr>
+                                                <td>Actual Planned</td>
+                                                <td>Actual Total</td>
+                                              </tr>
+                                          </thead> 
+                                          <tbody class="table_body">
+                                            <tr ng-repeat="gbsy in groupBarGraphSalesDataYearly">
+                                                <td>{{ gbsy.plannedTotal }}</td>
+                                                <td>{{ gbsy.actualTotal }}</td>
+                                            </tr>
+                                          </tbody>    
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-nav-view>
+        </ion-tab>
+
+    </ion-tabs>
+</ion-view>

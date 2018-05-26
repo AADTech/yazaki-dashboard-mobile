@@ -1,0 +1,72 @@
+<ion-side-menus enable-menu-with-back-views="false" cache-view="false">
+  <ion-side-menu-content ng-class="{'opaque-content' : sidemenuopened}">>
+    <ion-nav-bar class="bar-calm">
+      <ion-nav-back-button></ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon ion-navicon" menu-toggle="left" ng-show="!sidemenuopened"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="side-menu21"></ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="left" id="side-menu21">
+
+    <div class="bar bar-header bar-light" id="menu_bar_header">
+        <div class="buttons buttons-left header-item">
+          <span class="left-buttons">
+            <button class="button button-icon ion-navicon" menu-toggle="left"></button>
+          </span>
+        </div>
+        <h1 class="title"> 
+            <img src="img/disney.png" id="menu_logo" height="36" width="32" style=""> 
+            <span id="appName">Disney</span>
+        </h1>
+    </div>
+
+    <ion-content padding="false" style="top:0px !important;" class="side-menu-left side-menu-gradient">
+      <div class="spacer"></div>
+        <div class="sidemenu">
+
+        <ion-grid>
+          <ion-row>
+            <ion-col col-2>
+              <img src="img/qTax4VDrTCS2oZKxTpei_user_icon_3x.png" id="profile_logo" style="">
+              <span id="menu_user_name">{{menuCtrl.profileDetails.lastName}} {{menuCtrl.profileDetails.firstName}}</span>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+            
+      <hr style="background-color: black;height:2px;margin: 0;"/>
+      <ion-list id="menu-list1" st>
+        <ion-item class="item-icon-left  side-menu-item" id="menu-list-item1" ui-sref="menu.dashboard" menu-close="">
+        <img src="img/homePng.png" height="32" width="32" id="menu_icon">Home</ion-item>
+        <hr id="menu_bottom_border"/>
+
+        <ion-item class="item-icon-left  side-menu-item" id="menu-list-item2" ui-sref="menu.profile" menu-close="">
+        <img src="img/profilePng.png" height="36" width="32" id="menu_icon">My Profile</ion-item>
+        <hr id="menu_bottom_border"/>
+
+
+        <ion-item class="item-icon-left  side-menu-item" id="menu-list-item6" ui-sref="menu.settings" menu-close="">
+        <i class="icon ion-ios-gear-outline" id="menu_i_icon_"></i>Maintenance</ion-item>
+        <hr id="menu_bottom_border"/>
+
+        <ion-item class="item-icon-left  side-menu-item" id="menu-list-item8" ng-click="menuCtrl.logout()" menu-close="">
+        <i class="icon ion-log-out"></i>Logout</ion-item>
+
+      </ion-list> 
+
+      <div id="menu_footer_section">
+          <li id="menu_footer"> 
+              <i class="icon ion-earth"></i>  Disney  
+          </li>
+          <li id="menu_footer"> 
+              <i class="icon ion-ios-telephone-outline"></i>  Questions? Call 1.877.000.0000  
+          </li>
+          <li id="menu_footer"> 
+              ©2018 Disney. All rights reserved.  
+          </li>
+      </div>
+    </div>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
